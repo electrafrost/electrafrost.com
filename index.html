@@ -8,8 +8,7 @@
   <link rel="canonical" href="https://electrafrost.com/" />
   <meta property="og:title" content="electrafrost.btc" />
   <meta property="og:description" content="Building credentialed professional ecosystems for post-national on-chain economies." />
-  <meta property="og:url" content="https://electrafrost.com/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://electrafrost.com/" /><meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -30,16 +29,17 @@
     .social-icons a:hover{color:#f7845a;transform:translateY(-2px)}
     .social-icons svg{width:28px;height:28px;fill:currentColor}
     .credentials{font-family:'Lato',sans-serif;font-style:italic;font-size:14px;color:var(--text-light);margin-top:1.2rem;letter-spacing:.02em}
+    /* Projects */
     .projects-intro{font-size:1.05rem;color:var(--text-light);margin-bottom:2rem;line-height:1.85}
     .projects-intro strong{color:var(--text);font-weight:700}
     .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0 auto;max-width:500px}
-    .project-grid.row3{grid-template-columns:1fr 1fr 1fr;max-width:660px}
+    .project-grid.row3{grid-template-columns:1fr 1fr 1fr;max-width:660px;margin-top:1rem}
     .project-card{display:block;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s;text-decoration:none}
     .project-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
     .project-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+    /* About */
     .about-text{font-size:1.05rem;color:var(--text-light);text-align:center;line-height:1.85;margin-bottom:1.4rem}
     .about-text a{color:var(--orange);text-decoration:underline;text-underline-offset:2px}
-    /* Scrolling gallery */
     .gallery-wrap{overflow:hidden;margin:2.5rem 0;position:relative}
     .gallery-wrap::before,.gallery-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
     .gallery-wrap::before{left:0;background:linear-gradient(to right,white,transparent)}
@@ -52,18 +52,19 @@
     .about-card{display:block;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s;text-decoration:none}
     .about-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
     .about-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+    /* Contact */
     .contact-text{font-size:1.05rem;color:var(--text-light);margin-bottom:2rem;line-height:1.85}
     .contact-text a{color:var(--orange)}
     .contact-ns{display:block;width:180px;margin:0 auto 2rem;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s;text-decoration:none}
     .contact-ns:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
     .contact-ns img{width:100%;display:block;border-radius:10px}
     .email-link{cursor:pointer;color:var(--orange);text-decoration:underline;text-underline-offset:2px}
-    /* Sticky bottom nav */
-    .sticky-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--orange);display:flex;justify-content:center;gap:0;box-shadow:0 -2px 12px rgba(0,0,0,0.15)}
+    /* Sticky nav */
+    .sticky-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--orange);display:flex;justify-content:center;box-shadow:0 -2px 12px rgba(0,0,0,0.15)}
     .sticky-nav a{font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:white;text-decoration:none;padding:0.75rem 1.1rem;transition:background .2s;border-right:1px solid rgba(255,255,255,0.2)}
     .sticky-nav a:last-child{border-right:none}
     .sticky-nav a:hover{background:var(--orange-dark)}
-    @media(max-width:600px){.sticky-nav a{font-size:10px;padding:0.65rem 0.6rem;letter-spacing:0.08em}.project-grid{max-width:100%}.about-cards{grid-template-columns:1fr 1fr 1fr}}
+    @media(max-width:600px){.sticky-nav a{font-size:10px;padding:0.65rem 0.5rem;letter-spacing:0.06em}.project-grid{max-width:100%}.about-cards{grid-template-columns:1fr 1fr 1fr}}
   </style>
 </head>
 <body>
@@ -88,10 +89,10 @@
   <h2 class="section-heading">Projects</h2>
   <p class="projects-intro"><strong>Join me at Network School to build!</strong> P2P CPE with verifiable on-chain credentials; New global competency framework and roles for accountants in transnational tax coordination - Bitcoin unit-of-account system for multicurrencies - all forming to scale with internet economies.</p>
   <div class="project-grid">
-    <a class="project-card" href="https://credu.io/" target="_blank" rel="noopener"><img src="assets/project-credu.jpg" alt="CREDU" /></a>
+    <a class="project-card" href="https://credu.io/" target="_blank" rel="noopener"><img src="assets/project-credu.jpg" alt="CREDU Platform" /></a>
     <a class="project-card" href="https://credu.academy/" target="_blank" rel="noopener"><img src="assets/project-credu-academy.jpg" alt="CREDU Academy" /></a>
   </div>
-  <div class="project-grid row3" style="margin-top:1rem">
+  <div class="project-grid row3">
     <a class="project-card" href="https://www.digitalplayhouse.org.au/" target="_blank" rel="noopener"><img src="assets/project-digitalplayhouse.jpg" alt="Digital Playhouse Foundation" /></a>
     <a class="project-card" href="https://bitbybit.accountants/" target="_blank" rel="noopener"><img src="assets/project-bitbybit.jpg" alt="BitByBit Accountants" /></a>
     <a class="project-card" href="https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing/" target="_blank" rel="noopener"><img src="assets/project-bitcoin-uoa.jpg" alt="Bitcoin Unit of Account" /></a>
@@ -105,16 +106,13 @@
   <p class="about-text">I was recently appointed Deputy President of Malaysia's Institute of Public Accountants Member Advisory Committee. My role supports IPA Global's member engagement strategy and GCPA transdisciplinary accounting qualification in Southeast Asia.</p>
   <p class="about-text">With this complementary focus, I'm embedded in Network School (Johor&ndash;Singapore SEZ) since the original 2024 cohort, designing a network state aligned professional accounting faculty and association, and drafting a Global Competencies Framework for a Bitcoin Standard.</p>
   <p class="about-text">See my <a href="https://www.linkedin.com/in/electra-frost/" target="_blank" rel="noopener">LinkedIn</a> for credentials (they'll eventually be on-chain!)</p>
-  <!-- SCROLLING GALLERY — add image URLs below, duplicate the set to fill the track -->
   <div class="gallery-wrap">
-    <div class="gallery-track" id="galleryTrack">
-      <!-- Set 1 — replace src URLs with your images -->
+    <div class="gallery-track">
       <img class="gallery-img" src="assets/about-electrafi.jpg" alt="Electrafi" />
       <img class="gallery-img" src="assets/about-advisory.jpg" alt="Advisory" />
       <img class="gallery-img" src="assets/about-blog.jpg" alt="Blog" />
       <img class="gallery-img" src="assets/avatar.jpg" alt="Electra Frost" />
       <img class="gallery-img" src="assets/contact-ns.jpg" alt="Network School" />
-      <!-- Set 2 — duplicate for seamless loop -->
       <img class="gallery-img" src="assets/about-electrafi.jpg" alt="Electrafi" />
       <img class="gallery-img" src="assets/about-advisory.jpg" alt="Advisory" />
       <img class="gallery-img" src="assets/about-blog.jpg" alt="Blog" />
@@ -143,8 +141,6 @@
 </section>
 
 </div>
-
-<!-- STICKY BOTTOM NAV -->
 <nav class="sticky-nav">
   <a href="#home">HOME</a>
   <a href="#projects">PROJECTS</a>
@@ -153,6 +149,4 @@
   <a href="#about">ABOUT</a>
   <a href="#contact">CONTACT</a>
 </nav>
-
-</body>
-</html>
+</body></html>
