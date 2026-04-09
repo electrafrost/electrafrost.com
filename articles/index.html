@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articles — electrafrost.btc</title>
+  <title>Articles â electrafrost.btc</title>
   <meta name="description" content="Writing by Electra Frost on accounting, Bitcoin, network states, AI and the future of professional ecosystems." />
   <link rel="canonical" href="https://electrafrost.com/articles/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
@@ -42,22 +42,45 @@
     .pub-note{background:rgba(241,90,34,.04);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-top:2rem;font-size:15px;color:var(--text-light);text-align:center}
     .pub-note a{color:var(--orange)}
     @media(max-width:480px){.article-item{grid-template-columns:1fr;gap:.5rem}}
+  
+    .feed-section{margin-bottom:2.5rem}
+    .feed-label{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;text-align:center}
+    .feed-scroller{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.75rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    .feed-scroller::-webkit-scrollbar{height:4px}
+    .feed-scroller::-webkit-scrollbar-track{background:rgba(241,90,34,.08);border-radius:4px}
+    .feed-scroller::-webkit-scrollbar-thumb{background:var(--orange);border-radius:4px}
+    .feed-card{flex-shrink:0;width:260px;background:white;border:1px solid var(--border);border-radius:10px;overflow:hidden;scroll-snap-align:start;transition:border-color .2s,transform .2s;text-decoration:none;color:var(--text);display:flex;flex-direction:column}
+    .feed-card:hover{border-color:var(--orange);transform:translateY(-3px)}
+    .feed-card-img{width:100%;height:140px;object-fit:cover;background:rgba(241,90,34,.08);display:block}
+    .feed-card-img-placeholder{width:100%;height:140px;background:linear-gradient(135deg,rgba(241,90,34,.15),rgba(241,90,34,.05));display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0}
+    .feed-card-body{padding:1rem;flex:1;display:flex;flex-direction:column}
+    .feed-card-date{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:.4rem}
+    .feed-card-title{font-family:'Raleway',sans-serif;font-size:.95rem;font-weight:600;line-height:1.35;color:var(--text);flex:1}
+    .feed-loading{text-align:center;padding:2rem;color:var(--text-light);font-size:14px}
+    .feed-error{text-align:center;padding:1.5rem;font-size:13px;color:var(--text-light)}
+    .feed-error a{color:var(--orange)}
   </style>
 </head>
 <body>
 <div class="site-wrap">
   <section class="section">
     <p class="section-heading">Articles</p>
-    <h1>Writing on accounting, Bitcoin &amp; the future of professional ecosystems</h1>
-    <p class="page-intro">Original research and commentary on network states, AI-driven economies, decentralised credentials and transnational tax coordination. Published here first, cross-posted to Substack.</p>
+    
+    <!-- SUBSTACK RSS FEED SCROLLER -->
+    <div class="feed-section">
+      <p class="feed-label">Latest from Substack</p>
+      <div class="feed-scroller" id="substackFeed">
+        <div class="feed-loading">Loading posts&hellip;</div>
+      </div>
+    </div>
 
-    <div class="subscribe-bar">
+<div class="subscribe-bar">
       <div><strong>Get new articles in your inbox</strong><span>Subscribe on Substack &mdash; free, no spam, unsubscribe anytime</span></div>
       <a class="sub-btn" href="https://blog.electrafrost.com/subscribe" target="_blank" rel="noopener">Subscribe &rarr;</a>
     </div>
 
     <div class="article-list">
-      <!-- Most recent first — add new articles at the TOP -->
+      <!-- Most recent first â add new articles at the TOP -->
       <a class="article-item" href="https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing/" target="_blank" rel="noopener">
         <div class="article-date">2025<br/>Substack</div>
         <div>
@@ -67,13 +90,13 @@
           <div class="article-meta"><span>Electra Frost</span><span>Substack</span></div>
         </div>
       </a>
-      <!-- 10 PLACEHOLDERS — replace each with your Substack articles -->
+      <!-- 10 PLACEHOLDERS â replace each with your Substack articles -->
       
   <a class="article-item" href="/articles/article-1.html">
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 1 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 1 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -82,7 +105,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 2 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 2 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -91,7 +114,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 3 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 3 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -100,7 +123,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 4 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 4 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -109,7 +132,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 5 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 5 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -118,7 +141,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 6 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 6 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -127,7 +150,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 7 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 7 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -136,7 +159,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 8 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 8 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -145,7 +168,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 9 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 9 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -154,7 +177,7 @@
     <div class="article-date">Month YYYY<br/>This site</div>
     <div>
       <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 10 Title — Replace with your Substack title</div>
+      <div class="article-title">Article 10 Title â Replace with your Substack title</div>
       <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
       <div class="article-meta"><span>X min read</span></div>
     </div>
@@ -165,4 +188,34 @@
   </section>
 </div>
 <nav class="sticky-nav"><a href="/">HOME</a><a href="/#projects">PROJECTS</a><a href="/events/">EVENTS</a><a href="/articles/">ARTICLES</a><a href="/#about">ABOUT</a><a href="/#contact">CONTACT</a></nav>
+
+<script>
+(function() {
+  const feed = document.getElementById('substackFeed');
+  const RSS_URL = 'https://blog.electrafrost.com/feed';
+  const PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL) + '&api_key=&count=12';
+
+  fetch(PROXY)
+    .then(r => r.json())
+    .then(data => {
+      if (!data.items || !data.items.length) throw new Error('No items');
+      feed.innerHTML = data.items.map(item => {
+        const date = new Date(item.pubDate).toLocaleDateString('en-AU', {month:'short', year:'numeric'});
+        const img = item.thumbnail || item.enclosure?.link || '';
+        const imgHTML = img
+          ? '<img class="feed-card-img" src="' + img + '" alt="" loading="lazy" />'
+          : '<div class="feed-card-img-placeholder">✍️</div>';
+        return '<a class="feed-card" href="' + item.link + '" target="_blank" rel="noopener">' +
+          imgHTML +
+          '<div class="feed-card-body">' +
+            '<div class="feed-card-date">' + date + '</div>' +
+            '<div class="feed-card-title">' + item.title + '</div>' +
+          '</div></a>';
+      }).join('');
+    })
+    .catch(() => {
+      feed.innerHTML = '<div class="feed-error">Could not load feed — <a href="https://blog.electrafrost.com/" target="_blank" rel="noopener">read on Substack &rarr;</a></div>';
+    });
+})();
+</script>
 </body></html>
