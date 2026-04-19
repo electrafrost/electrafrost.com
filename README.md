@@ -1,5 +1,7 @@
 # electrafrost.com
 Personal website - electrafrost.com
+## About
+Electra Frost
 Chartered Tax Adviser (CTA), Fellow Member: The Tax Institute (TTI) and Institute of Public Accountants (IPA)
 Global Certificate of Public Accounting (IPA Global)
 Bachelor and Masters Degrees - Australian Tax Law; International Taxation, Policy Design (UNSW)
