@@ -3,7 +3,6 @@ Personal website - electrafrost.com
 
 ## About
 Electra Frost
-Building credentialed professional ecosystems and tax frameworks for post-national on-chain economies.
 
 - Chartered Tax Adviser (CTA), Fellow Member: The Tax Institute (TTI) and Institute of Public Accountants (IPA)
 - Global Certificate of Public Accounting (IPA Global)
@@ -14,5 +13,7 @@ Building credentialed professional ecosystems and tax frameworks for post-nation
 - Founder - CREDU Academy and CREDU Platform (verified credentials), Kigumi Solutions (structuring)
 - Member: Digital Economy Council of Australia, Web3 CFO Club (2021), WA AI Hub
 - Based at Network School, Forest City, Malaysia
+
+Building credentialed professional ecosystems and tax frameworks for post-national on-chain economies.
 
 Full profile: [graph.electrafrost.com](https://graph.electrafrost.com)
