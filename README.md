@@ -3,6 +3,7 @@ Personal website - electrafrost.com
 
 ## About
 Electra Frost
+Building credentialed professional ecosystems and tax frameworks for post-national on-chain economies.
 
 - Chartered Tax Adviser (CTA), Fellow Member: The Tax Institute (TTI) and Institute of Public Accountants (IPA)
 - Global Certificate of Public Accounting (IPA Global)
