@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events — electrafrost.btc</title>
+  <title>Events - electrafrost.btc</title>
   <meta name="description" content="Join Electra Frost at upcoming events and explore past event materials." />
   <link rel="canonical" href="https://electrafrost.com/events/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
@@ -23,20 +23,32 @@
     .luma-note a{color:var(--orange)}
     /* Narrow past events list */
     .past-events-list{display:flex;flex-direction:column;margin-top:1rem}
-    .past-event{display:flex;align-items:center;gap:1.5rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
+    .past-event{display:flex;align-items:center;gap:1.25rem;padding:1.2rem 0;border-bottom:1px solid var(--border)}
     .past-event:last-child{border-bottom:none}
+    .past-event-thumb{width:72px;height:72px;border-radius:6px;object-fit:cover;flex-shrink:0;background:rgba(241,90,34,0.08);display:block}
     .past-event-date{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);min-width:80px;flex-shrink:0}
-    .past-event-body{flex:1}
-    .past-event-title{font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
+    .past-event-body{flex:1;min-width:0}
+    .past-event-title{font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.2rem;line-height:1.3}
     .past-event-sub{font-size:13px;color:var(--text-light)}
-    .past-event-link{font-size:13px;font-weight:700;color:var(--orange);text-decoration:none;white-space:nowrap;flex-shrink:0}
+    .past-event-links{display:flex;flex-direction:column;gap:0.3rem;align-items:flex-end;flex-shrink:0}
+    .past-event-link{font-size:13px;font-weight:700;color:var(--orange);text-decoration:none;white-space:nowrap}
     .past-event-link:hover{text-decoration:underline}
+    .past-events-status{text-align:center;color:var(--text-light);font-size:14px;padding:2.5rem 0}
+    .past-events-status a{color:var(--orange);font-weight:700;text-decoration:none}
+    .past-events-status a:hover{text-decoration:underline}
     /* Sticky nav */
     .sticky-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--orange);display:flex;justify-content:center;box-shadow:0 -2px 12px rgba(0,0,0,0.15)}
     .sticky-nav a{font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:white;text-decoration:none;padding:0.75rem 1.1rem;transition:background .2s;border-right:1px solid rgba(255,255,255,0.2)}
     .sticky-nav a:last-child{border-right:none}
     .sticky-nav a:hover{background:var(--orange-dark)}
-    @media(max-width:600px){.sticky-nav a{font-size:10px;padding:0.65rem 0.5rem;letter-spacing:0.06em}.past-event{flex-wrap:wrap;gap:0.5rem}.past-event-date{min-width:auto}}
+    @media(max-width:600px){
+      .sticky-nav a{font-size:10px;padding:0.65rem 0.5rem;letter-spacing:0.06em}
+      .past-event{flex-wrap:wrap;gap:0.75rem}
+      .past-event-thumb{width:56px;height:56px}
+      .past-event-date{min-width:auto;width:100%;order:-1}
+      .past-event-body{flex-basis:calc(100% - 56px - 0.75rem)}
+      .past-event-links{flex-direction:row;gap:0.9rem;width:100%;justify-content:flex-end}
+    }
   </style>
 </head>
 <body>
@@ -53,49 +65,9 @@
 
   <section class="section">
     <p class="section-heading">Past Events</p>
-    <p class="page-intro">A record of talks, panels and workshops &mdash; with links to full write-ups and materials.</p>
-    <div class="past-events-list">
-      
-  <div class="past-event">
-    <div class="past-event-date">Month YYYY</div>
-    <div class="past-event-body">
-      <div class="past-event-title">Event Title 1 — Replace with your event name</div>
-      <div class="past-event-sub">Organisation &middot; Location or Online</div>
-    </div>
-    <a class="past-event-link" href="/articles/">Article &rarr;</a>
-  </div>
-  <div class="past-event">
-    <div class="past-event-date">Month YYYY</div>
-    <div class="past-event-body">
-      <div class="past-event-title">Event Title 2 — Replace with your event name</div>
-      <div class="past-event-sub">Organisation &middot; Location or Online</div>
-    </div>
-    <a class="past-event-link" href="/articles/">Article &rarr;</a>
-  </div>
-  <div class="past-event">
-    <div class="past-event-date">Month YYYY</div>
-    <div class="past-event-body">
-      <div class="past-event-title">Event Title 3 — Replace with your event name</div>
-      <div class="past-event-sub">Organisation &middot; Location or Online</div>
-    </div>
-    <a class="past-event-link" href="/articles/">Article &rarr;</a>
-  </div>
-  <div class="past-event">
-    <div class="past-event-date">Month YYYY</div>
-    <div class="past-event-body">
-      <div class="past-event-title">Event Title 4 — Replace with your event name</div>
-      <div class="past-event-sub">Organisation &middot; Location or Online</div>
-    </div>
-    <a class="past-event-link" href="/articles/">Article &rarr;</a>
-  </div>
-  <div class="past-event">
-    <div class="past-event-date">Month YYYY</div>
-    <div class="past-event-body">
-      <div class="past-event-title">Event Title 5 — Replace with your event name</div>
-      <div class="past-event-sub">Organisation &middot; Location or Online</div>
-    </div>
-    <a class="past-event-link" href="/articles/">Article &rarr;</a>
-  </div>
+    <p class="page-intro">A record of talks, panels and workshops, with links to full write-ups and materials.</p>
+    <div id="past-events-list" class="past-events-list">
+      <div class="past-events-status">Loading past events...</div>
     </div>
   </section>
 </div>
@@ -107,4 +79,107 @@
   <a href="/#about">ABOUT</a>
   <a href="/#contact">CONTACT</a>
 </nav>
+
+<script>
+/* ----------------------------------------------------------------------------
+ * Past events feed
+ *
+ * Source: electra-chat Cloudflare Worker, which proxies api.lu.ma server-side
+ * and normalises the payload. CORS is configured for electrafrost.com.
+ *
+ * To add an article link for a specific past event, grab its api_id (visible
+ * on each rendered row's data-api-id attribute, or hit
+ * https://electra-chat.electrafrost.workers.dev/luma/past?debug=1) and add
+ * it to ARTICLE_MAP below.
+ * ----------------------------------------------------------------------------
+ */
+(function () {
+  var PAST_EVENTS_ENDPOINT = 'https://electra-chat.electrafrost.workers.dev/luma/past';
+
+  // Map of Luma event api_id -> article URL (relative or absolute). Add as you publish write-ups.
+  var ARTICLE_MAP = {
+    // 'evt-XXXXXXXXXXXXXXX': '/articles/some-article-slug',
+    // 'evt-YYYYYYYYYYYYYYY': 'https://electrafrost.substack.com/p/something',
+  };
+
+  function escapeHTML(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '';
+    try {
+      var d = new Date(iso);
+      if (isNaN(d.getTime())) return '';
+      return d.toLocaleString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase();
+    } catch (_) { return ''; }
+  }
+
+  function renderRow(ev) {
+    var articleHref = ARTICLE_MAP[ev.api_id];
+    var sub = ev.location || '';
+    var thumb = ev.cover_url
+      ? '<img class="past-event-thumb" src="' + escapeHTML(ev.cover_url) + '" alt="" loading="lazy" />'
+      : '<div class="past-event-thumb" aria-hidden="true"></div>';
+
+    var links = '';
+    if (ev.url) {
+      links += '<a class="past-event-link" href="' + escapeHTML(ev.url) + '" target="_blank" rel="noopener">Lu.ma &rarr;</a>';
+    }
+    if (articleHref) {
+      links += '<a class="past-event-link" href="' + escapeHTML(articleHref) + '">Article &rarr;</a>';
+    }
+
+    return (
+      '<div class="past-event" data-api-id="' + escapeHTML(ev.api_id || '') + '">' +
+        thumb +
+        '<div class="past-event-date">' + escapeHTML(fmtDate(ev.start_at)) + '</div>' +
+        '<div class="past-event-body">' +
+          '<div class="past-event-title">' + escapeHTML(ev.name || 'Untitled event') + '</div>' +
+          '<div class="past-event-sub">' + escapeHTML(sub) + '</div>' +
+        '</div>' +
+        '<div class="past-event-links">' + links + '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderStatus(html) {
+    var root = document.getElementById('past-events-list');
+    if (root) root.innerHTML = '<div class="past-events-status">' + html + '</div>';
+  }
+
+  function renderError() {
+    renderStatus(
+      'Couldn\'t load past events. ' +
+      '<a href="https://lu.ma/electrafrost" target="_blank" rel="noopener">View on Lu.ma &rarr;</a>'
+    );
+  }
+
+  async function loadPastEvents() {
+    var root = document.getElementById('past-events-list');
+    if (!root) return;
+
+    try {
+      var res = await fetch(PAST_EVENTS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      var data = await res.json();
+      var events = Array.isArray(data && data.events) ? data.events : [];
+
+      if (events.length === 0) {
+        renderStatus('No past events yet.');
+        return;
+      }
+
+      root.innerHTML = events.map(renderRow).join('');
+    } catch (err) {
+      console.error('Past events load failed:', err);
+      renderError();
+    }
+  }
+
+  loadPastEvents();
+})();
+</script>
 </body></html>
