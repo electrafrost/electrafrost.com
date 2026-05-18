@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articles &mdash; electrafrost.btc</title>
+  <title>Articles - electrafrost.btc</title>
   <meta name="description" content="Writing by Electra Frost on accounting, Bitcoin, network states, AI and the future of professional ecosystems." />
   <link rel="canonical" href="https://electrafrost.com/articles/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
@@ -21,134 +21,143 @@
     .subscribe-bar span{font-size:14px;color:var(--text-light)}
     .sub-btn{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:white;background:var(--orange);border-radius:8px;padding:.65rem 1.2rem;text-decoration:none;white-space:nowrap;transition:background .2s}
     .sub-btn:hover{background:var(--orange-dark)}
-    .article-list{display:flex;flex-direction:column}
-    .article-item{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);transition:padding-left .2s}
-    .article-item:hover{padding-left:.5rem}
-    .article-item:hover .article-title{color:var(--orange)}
-    .article-date{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);padding-top:.25rem;line-height:1.5}
-    .article-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.4rem}
-    .article-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);background:rgba(241,90,34,.08);padding:.15rem .45rem;border-radius:4px}
-    .article-title{font-family:'Raleway',sans-serif;font-size:1.1rem;font-weight:600;line-height:1.3;margin-bottom:.4rem;transition:color .2s}
-    .article-excerpt{font-size:15px;color:var(--text-light);line-height:1.65;margin:0}
-    .article-meta{margin-top:.5rem;font-size:12px;color:#999;display:flex;gap:1rem}
-    .pub-note{background:rgba(241,90,34,.04);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-top:2rem;font-size:15px;color:var(--text-light);text-align:center}
-    .pub-note a{color:var(--orange)}
+    /* Article list, row design matching past-events */
+    .article-list{display:flex;flex-direction:column;margin-top:1rem}
+    .article-row{display:flex;align-items:center;gap:1.25rem;padding:1.2rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:padding-left .15s}
+    .article-row:last-child{border-bottom:none}
+    .article-row:hover{padding-left:.4rem}
+    .article-row:hover .article-title{color:var(--orange)}
+    .article-thumb{width:72px;height:72px;border-radius:6px;object-fit:cover;flex-shrink:0;background:rgba(241,90,34,0.08);display:block}
+    .article-date{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);min-width:80px;flex-shrink:0}
+    .article-body{flex:1;min-width:0}
+    .article-title{font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.3rem;line-height:1.3;transition:color .15s}
+    .article-subtitle{font-size:14px;color:var(--text-light);line-height:1.5}
+    .article-arrow{font-size:14px;font-weight:700;color:var(--orange);white-space:nowrap;flex-shrink:0}
+    .article-status{text-align:center;color:var(--text-light);font-size:14px;padding:2.5rem 0}
+    .article-status a{color:var(--orange);font-weight:700;text-decoration:none}
+    .article-status a:hover{text-decoration:underline}
+    /* Sticky nav */
     .sticky-nav{position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--orange);display:flex;justify-content:center;box-shadow:0 -2px 12px rgba(0,0,0,0.15)}
     .sticky-nav a{font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:white;text-decoration:none;padding:0.75rem 1.1rem;transition:background .2s;border-right:1px solid rgba(255,255,255,0.2)}
     .sticky-nav a:last-child{border-right:none}
     .sticky-nav a:hover{background:var(--orange-dark)}
-    @media(max-width:600px){.sticky-nav a{font-size:10px;padding:0.65rem 0.6rem;letter-spacing:0.08em}.article-item{grid-template-columns:1fr;gap:.5rem}}
+    @media(max-width:600px){
+      .sticky-nav a{font-size:10px;padding:0.65rem 0.5rem;letter-spacing:0.06em}
+      .article-row{flex-wrap:wrap;gap:0.75rem}
+      .article-thumb{width:56px;height:56px}
+      .article-date{min-width:auto;width:100%;order:-1;font-size:10px}
+      .article-body{flex-basis:calc(100% - 56px - 0.75rem)}
+      .article-arrow{display:none}
+    }
   </style>
 </head>
 <body>
 <div class="site-wrap">
   <section class="section">
     <p class="section-heading">Articles</p>
-    <p class="page-intro">Original research and commentary on my areas of professional interest &mdash; including decentralised professional association, peer verified credentialing, credibility on-chain, AI governance, agentic procurement, network societies, why Bitcoin changes everything &mdash; and how the accounting profession becomes central to all of this. Published here first, cross-posted to Substack.</p>
+    <p class="page-intro">Original research and commentary on my areas of professional interest, including decentralised professional association, peer verified credentialing, credibility on-chain, AI governance, agentic procurement, network societies, why Bitcoin changes everything, and how the accounting profession becomes central to all of this.</p>
     <div class="subscribe-bar">
-      <div><strong>Get new articles in your inbox</strong><span>Subscribe on Substack &mdash; free, no spam, unsubscribe anytime</span></div>
+      <div><strong>Get new articles in your inbox</strong><span>Subscribe on Substack, free, no spam, unsubscribe anytime</span></div>
       <a class="sub-btn" href="https://blog.electrafrost.com/subscribe" target="_blank" rel="noopener">Subscribe &rarr;</a>
     </div>
-    <div class="article-list">
-      <!-- Most recent first ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ add new articles at the TOP -->
-      <a class="article-item" href="https://blog.electrafrost.com/p/bitcoin-unit-of-account-establishing/" target="_blank" rel="noopener">
-        <div class="article-date">2025<br/>Substack</div>
-        <div>
-          <div class="article-tags"><span class="article-tag">Bitcoin</span><span class="article-tag">Accounting</span><span class="article-tag">Thesis</span></div>
-          <div class="article-title">Bitcoin Unit-of-Account: Establishing a Global Standard with Network Accountants</div>
-          <p class="article-excerpt">How Accountants in the Network State Can Pioneer Bitcoin&rsquo;s Function as a Unit of Account</p>
-          <div class="article-meta"><span>Electra Frost</span><span>Substack</span></div>
-        </div>
-      </a>
-      <!-- 10 PLACEHOLDERS ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ replace each with your Substack articles -->
-      
-  <a class="article-item" href="/articles/article-1.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 1 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
+    <div id="article-list" class="article-list">
+      <div class="article-status">Loading articles...</div>
     </div>
-  </a>
-  <a class="article-item" href="/articles/article-2.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 2 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-3.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 3 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-4.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 4 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-5.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 5 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-6.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 6 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-7.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 7 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-8.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 8 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-9.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div>
-      <div class="article-tags"><span class="article-tag">Topic</span></div>
-      <div class="article-title">Article 9 Title ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Replace with your Substack title</div>
-      <p class="article-excerpt">Paste your article excerpt or opening paragraph here from Substack.</p>
-      <div class="article-meta"><span>X min read</span></div>
-    </div>
-  </a>
-  <a class="article-item" href="/articles/article-10.html">
-    <div class="article-date">Month YYYY<br/>This site</div>
-    <div class="pub-note">Articles are published here first &mdash; canonical source. Cross-posted to <a href="https://blog.electrafrost.com/" target="_blank" rel="noopener">Substack</a> for subscribers and <a href="https://www.linkedin.com/in/electra-frost/" target="_blank" rel="noopener">LinkedIn</a> for distribution.</div>
   </section>
 </div>
 <nav class="sticky-nav">
-  <a href="/">HOME</a><a href="/#projects">PROJECTS</a><a href="/events/">EVENTS</a><a href="/articles/">ARTICLES</a><a href="/#about">ABOUT</a><a href="/#contact">CONTACT</a>
+  <a href="/">HOME</a>
+  <a href="/#projects">PROJECTS</a>
+  <a href="/events/">EVENTS</a>
+  <a href="/articles/">ARTICLES</a>
+  <a href="https://graph.electrafrost.com/" target="_blank" rel="noopener">GRAPH</a>
+  <a href="/#about">ABOUT</a>
+  <a href="/#contact">CONTACT</a>
 </nav>
+
+<script>
+/* ----------------------------------------------------------------------------
+ * Substack posts feed
+ *
+ * Source: electra-chat Cloudflare Worker, which proxies blog.electrafrost.com/feed
+ * server-side and normalises the payload. CORS is configured for electrafrost.com.
+ *
+ * Schema returned by the worker:
+ *   { posts: [{ title, subtitle, url, published_at, cover_url }, ...],
+ *     count, fetched_at }
+ * ----------------------------------------------------------------------------
+ */
+(function () {
+  var POSTS_ENDPOINT = 'https://electra-chat.electrafrost.workers.dev/substack/posts';
+
+  function escapeHTML(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+    });
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '';
+    try {
+      var d = new Date(iso);
+      if (isNaN(d.getTime())) return '';
+      return d.toLocaleString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase();
+    } catch (_) { return ''; }
+  }
+
+  function renderRow(post) {
+    var thumb = post.cover_url
+      ? '<img class="article-thumb" src="' + escapeHTML(post.cover_url) + '" alt="" loading="lazy" />'
+      : '<div class="article-thumb" aria-hidden="true"></div>';
+
+    return (
+      '<a class="article-row" href="' + escapeHTML(post.url) + '" target="_blank" rel="noopener">' +
+        thumb +
+        '<div class="article-date">' + escapeHTML(fmtDate(post.published_at)) + '</div>' +
+        '<div class="article-body">' +
+          '<div class="article-title">' + escapeHTML(post.title || 'Untitled') + '</div>' +
+          '<div class="article-subtitle">' + escapeHTML(post.subtitle || '') + '</div>' +
+        '</div>' +
+        '<div class="article-arrow">&rarr;</div>' +
+      '</a>'
+    );
+  }
+
+  function renderStatus(html) {
+    var root = document.getElementById('article-list');
+    if (root) root.innerHTML = '<div class="article-status">' + html + '</div>';
+  }
+
+  function renderError() {
+    renderStatus(
+      'Couldn\'t load articles. ' +
+      '<a href="https://blog.electrafrost.com/" target="_blank" rel="noopener">Read on Substack &rarr;</a>'
+    );
+  }
+
+  async function loadPosts() {
+    var root = document.getElementById('article-list');
+    if (!root) return;
+
+    try {
+      var res = await fetch(POSTS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      var data = await res.json();
+      var posts = Array.isArray(data && data.posts) ? data.posts : [];
+
+      if (posts.length === 0) {
+        renderStatus('No articles yet.');
+        return;
+      }
+
+      root.innerHTML = posts.map(renderRow).join('');
+    } catch (err) {
+      console.error('Articles load failed:', err);
+      renderError();
+    }
+  }
+
+  loadPosts();
+})();
+</script>
 </body></html>
